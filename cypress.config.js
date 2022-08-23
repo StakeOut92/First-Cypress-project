@@ -6,7 +6,7 @@ module.exports = defineConfig({
 
   e2e: {
     baseUrl: "https://reqres.in/",
-    specPattern: "cypress/all-tests",
+    specPattern: "cypress/teaching-materials",
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
