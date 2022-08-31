@@ -1,0 +1,10 @@
+{
+  "base": "USD",
+  "date": "2018-02-13",
+  "rates": [
+    {"shortname" : "CAD", "rate": 1.3088247},
+    {"shortName": "CHF", "rate": 0.97556225},
+    {"shortName": "EUR", "rate": 0.99959396},
+    {"shortName": "GBP", "rate": 0.85813489}
+  ]
+}

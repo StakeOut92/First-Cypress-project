@@ -53,7 +53,7 @@ class ArrayMethodsPage {
 
     taskNumberFive() {
         cy.log("Print planets whose distance is greater than a certain value, such as five.")
-        const planetDistanceMoreThanFive = this.planets.filter(function (e){
+        const planetDistanceMoreThanFive = this.planets.filter(function (e) {
             return e.distance > 5
         })
         planetDistanceMoreThanFive.forEach(planetDistanceMoreThanFive => {
@@ -61,6 +61,59 @@ class ArrayMethodsPage {
         })
     }
 
+    taskNumberSix() {
+        cy.log("Starting searching method of index in 'for' case")
+        let searchTerm = "SomeNewPlanet"
+        let index = -1
+        for (let i = 0, len = this.planets.length; i < len; i++) {
+            if (this.planets[i].planet === searchTerm) {
+                index = i
+                break
+            }
+        }
+
+        cy.log(" Starting searching method in 'indexOf'")
+        let splicedPlanetIndex = this.planets.map(x => x.planet).indexOf('SomeNewPlanet')
+        cy.log("Splice planet by founded index")
+        this.planets.splice(splicedPlanetIndex)
+        this.planets.forEach(planet => {
+            cy.log(Object.keys(planet).map(key => key + ':' + planet[key]).join(', '));
+        })
+    }
+
+    taskNumberSeven() {
+        cy.log("Starting method for sorting an array by radius (ascending)")
+        let sortedPlanetsByRadius = this.planets.sort(function (a, b) {
+            return a.radius - b.radius
+        })
+        sortedPlanetsByRadius.forEach(sortedPlanetsByRadius => {
+            cy.log(Object.keys(sortedPlanetsByRadius).map(key => key + ':' + sortedPlanetsByRadius[key]).join(', '))
+        })
+    }
+
+    taskNumberEight() {
+        cy.log("Starting method sorting planet by Name")
+        let sortedPlanetsByName = this.planets.sort(function (a, b) {
+            let x = a.planet.toLowerCase()
+            let y = b.planet.toLowerCase()
+            if (x < y) {
+                return -1
+            }
+            if (x > y) {
+                return 1
+            }
+            return 0
+        })
+        sortedPlanetsByName.forEach(sortedPlanetsByName => {
+            cy.log(Object.keys(sortedPlanetsByName).map(key => key + ':' + sortedPlanetsByName[key]).join(', '))
+        })
+    }
+
+    taskNumberNine(){
+        cy.log("Starting method to print array lenght in console")
+        let planetArrayLength = this.planets.length
+       console.log(planetArrayLength)
+    }
 }
 
 export default new ArrayMethodsPage()

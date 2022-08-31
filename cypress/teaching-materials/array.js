@@ -7,7 +7,9 @@ describe("Array methods", () => {
         arrayMethodsPage.taskNumberThree()
         arrayMethodsPage.taskNumberFour()
         arrayMethodsPage.taskNumberFive()
-
+        arrayMethodsPage.taskNumberSix()
+        arrayMethodsPage.taskNumberSeven()
+        arrayMethodsPage.taskNumberEight()
+        arrayMethodsPage.taskNumberNine()
     })
-
 })
