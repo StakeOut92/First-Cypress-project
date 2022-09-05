@@ -3,7 +3,7 @@ import accessoriesPage from "../../page-objects/accessoriesPage"
 
 
 describe('Test for google buds', () => {
-    it('Positive: Create user', () => {
+    it('Positive: Check message', () => {
         cy.log('Opening start page for google devices')
         accessoriesPage.open();
         cy.log('Searching "Search icon" and click on them ')
